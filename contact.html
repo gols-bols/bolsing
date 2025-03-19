@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Eagle Square Luxury Watches</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <div class="header-wrapper">
+            <nav class="primary-nav" role="navigation" aria-label="Main navigation">
+                <a href="/" class="brand-logo" aria-label="Eagle Square home">
+                    <img src="svg/Eaglesquare.svg" alt="">
+                </a>
+                <ul class="nav-links" role="menubar">
+                    <li role="none"><a href="/" class="nav-link">Home</a></li>
+                    <li role="none"><a href="/about.html" class="nav-link">About</a></li>
+                    <li role="none"><a href="/shop.html" class="nav-link">Shop</a></li>
+                    <li role="none"><a href="/service.html" class="nav-link">Service</a></li>
+                    <li role="none"><a href="/contact.html" class="nav-link active" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main" class="main-content">
+        <section class="section-content">
+            <h1 class="section-heading">Contact Us</h1>
+            <p class="section-description">
+                Have questions? Reach out to us via phone or email, or visit us at our store.
+            </p>
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form action="/send-message" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="/svg/Eaglesquare.svg" alt="Eagle Square Watches" class="footer-logo">
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; EAGLESQUARE. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
