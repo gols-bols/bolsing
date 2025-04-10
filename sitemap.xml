@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!--  created with sitemap generator https://octopus.do  -->
+
+    <url>
+        <loc>https://octopus.do/la00q49vhw</loc>
+        <lastmod>2025-04-07</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://octopus.do/la00q49vhw/about</loc>
+        <lastmod>2025-04-07</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://octopus.do/la00q49vhw/shop</loc>
+        <lastmod>2025-04-07</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://octopus.do/la00q49vhw/service</loc>
+        <lastmod>2025-04-07</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://octopus.do/la00q49vhw/contact</loc>
+        <lastmod>2025-04-07</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+</urlset>
