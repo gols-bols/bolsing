@@ -69,18 +69,44 @@ button {
     font-family: inherit;
 }
 .skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
+    position: fixed;
+    top: 0;
+    left: 24px;
     background: var(--color-accent);
     color: var(--color-white);
-    padding: var(--spacing-md);
+    border-radius: 0 0 16px 16px;
     z-index: 100;
-    transition: top var(--transition-fast);
+    height: 4px;
+    width: 60px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    opacity: 0.8;
+    transition: all 0.3s cubic-bezier(.4,0,.2,1);
 }
 
+.skip-link span {
+    opacity: 0;
+    transition: opacity 0.2s;
+    padding: 0 16px;
+}
+
+.skip-link:hover,
 .skip-link:focus {
-    top: 0;
+    height: 40px;
+    width: 220px;
+    padding: 0;
+    opacity: 1;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.skip-link:hover span,
+.skip-link:focus span {
+    opacity: 1;
 }
 
 .visually-hidden {
@@ -153,6 +179,7 @@ button {
 
 .nav-link.active {
     font-weight: 700;
+    color: var(--color-accent);
 }
 
 .header-actions {
@@ -185,7 +212,7 @@ button {
 }
 
 .cta-button {
-    background: var(--color-primary);
+    background: var(--color-accent);
     color: var(--color-white);
     border: none;
     border-radius: var(--border-radius-full);
@@ -197,7 +224,7 @@ button {
 
 .cta-button:hover,
 .cta-button:focus {
-    background-color: var(--color-accent);
+    background-color: var(--color-primary);
 }
 
 .hero-section {
@@ -294,11 +321,12 @@ button {
 
 .section-description,
 .section-content p {
-    font-size: 1.125rem;
-    line-height: 1.6;
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.4;
     color: var(--color-gray-700);
     margin-bottom: var(--spacing-md);
-    text-align: justify;
+    text-align: left;
 }
 
 .watch-grid {
@@ -595,14 +623,17 @@ body, html {
 
 .about-image-c,
 .services-image-c {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: var(--spacing-lg) 0;
 }
 
 .about-image,
 .services-image {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     border-radius: var(--border-radius-md);
     box-shadow: var(--shadow-md);
+    margin-right: var(--spacing-lg);
 }

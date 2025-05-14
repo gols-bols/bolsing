@@ -1,18 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4TXZLE3EN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Y4TXZLE3EN');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Eagle Square Luxury Watches</title>
+    <title>Golden Dial Watch - Eagle Square</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,9 +16,9 @@
                 <ul class="nav-links" role="menubar">
                     <li role="none"><a href="/" class="nav-link">Home</a></li>
                     <li role="none"><a href="/about.html" class="nav-link">About</a></li>
-                    <li role="none"><a href="/shop.html" class="nav-link">Shop</a></li>
+                    <li role="none"><a href="/shop.html" class="nav-link active" aria-current="page">Shop</a></li>
                     <li role="none"><a href="/service.html" class="nav-link">Service</a></li>
-                    <li role="none"><a href="/contact.html" class="nav-link active" aria-current="page">Contact</a></li>
+                    <li role="none"><a href="/contact.html" class="nav-link">Contact</a></li>
                 </ul>
                 <div class="header-actions">
                     <button class="cart-button" aria-label="Shopping cart" aria-haspopup="true">
@@ -38,34 +29,19 @@
             </nav>
         </div>
     </header>
-
-    <main role="main" class="main-content">
-        <section class="section-content">
-            <h1 class="section-heading">Contact Us</h1>
-            <p class="section-description">
-                Have questions? Reach out to us via phone or email, or visit us at our store.
-            </p>
-            <div class="contact-form">
-                <h2>Send Us a Message</h2>
-                <form action="/send-message" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">Send Message</button>
-                </form>
+    <main class="main-content">
+        <section class="section-content" style="display: flex; align-items: center; gap: 2rem;">
+            <div style="flex:1; text-align:center;">
+                <img src="img/Breguet - Classique Grande Complication Tourbillon 5317 1 (1) 1 1.png" alt="Golden Dial Watch" class="about-image" style="max-width:350px; margin:0 auto;">
+            </div>
+            <div style="flex:2;">
+                <h1 class="section-heading">Golden Dial Watch</h1>
+                <p class="section-description">This model combines luxury and precision. Gold dial, sapphire crystal, Swiss movement, and genuine leather strap. The perfect choice for connoisseurs of classic style.</p>
+                <div class="price-tag" style="font-size:2rem; margin-bottom:1.5rem;">$167.00</div>
+                <button class="buy-button" aria-label="Buy now">Buy Now</button>
             </div>
         </section>
     </main>
-
     <footer class="site-footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-brand">
@@ -77,4 +53,4 @@
         </div>
     </footer>
 </body>
-</html>
+</html> 
