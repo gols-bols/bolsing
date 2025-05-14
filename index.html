@@ -58,10 +58,9 @@
                 <div class="header-actions">
                     <button class="cart-button" aria-label="Shopping cart" aria-haspopup="true">
                         <img src="svg/Vector.svg" alt="scibidi" class="cart-icon" aria-hidden="true">
-                        <!-- <span class="cart-count" aria-live="polite"></span> -->
                     </button>
-
-                    <button class="cta-button" aria-label="Purchase now">Purchase Now</button>
+                    <input type="text" id="search-input" class="search-input" placeholder="Search watches..." style="margin-right: 1rem; padding: 0.5rem 1rem; border-radius: 9999px; border: 1px solid #eee; font-size: 1rem;">
+                    <button class="cta-button" aria-label="Purchase now" id="purchase-now-btn">Purchase Now</button>
                 </div>
             </nav>
         </div>
@@ -77,7 +76,7 @@
                     Premium watches crafted with precision and elegance for the discerning collector.
                 </p>
                 <div class="price-tag" aria-label="Price">$289.00</div>
-                <button class="buy-button" aria-label="Buy now">Buy Now</button>
+                <button class="buy-button" aria-label="Buy now" id="buy-now-btn">Buy Now</button>
             </div>
             
             <div class="hero-image-container">
@@ -257,6 +256,35 @@
                     alert('Thank you for subscribing!');
                 }
             });
+
+            // Purchase Now button
+            const purchaseBtn = document.getElementById('purchase-now-btn');
+            if (purchaseBtn) {
+                purchaseBtn.addEventListener('click', () => {
+                    window.location.href = 'shop.html';
+                });
+            }
+
+            // Search functionality
+            const searchInput = document.getElementById('search-input');
+            const watchCards = document.querySelectorAll('.watch-card');
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    const value = e.target.value.toLowerCase();
+                    watchCards.forEach(card => {
+                        const title = card.querySelector('.watch-title').textContent.toLowerCase();
+                        card.style.display = title.includes(value) ? '' : 'none';
+                    });
+                });
+            }
+
+            // Buy Now button
+            const buyNowBtn = document.getElementById('buy-now-btn');
+            if (buyNowBtn) {
+                buyNowBtn.addEventListener('click', () => {
+                    window.location.href = 'shop.html';
+                });
+            }
         });
     </script>
 </body>
