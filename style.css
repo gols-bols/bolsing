@@ -326,7 +326,7 @@ button {
     line-height: 1.4;
     color: var(--color-gray-700);
     margin-bottom: var(--spacing-md);
-    text-align: left;
+    text-align: center;
 }
 
 .watch-grid {
