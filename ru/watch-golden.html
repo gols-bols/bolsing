@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Подробная информация о часах с золотым циферблатом Eagle Square.">
+    <title>Часы с золотым циферблатом - Eagle Square Luxury Watches</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <div class="header-wrapper">
+            <nav class="primary-nav" role="navigation" aria-label="Main navigation">
+                <a href="/ru/" class="brand-logo" aria-label="Главная Eagle Square">
+                    <img src="../svg/Eaglesquare.svg" alt="Часы Eagle Square" width="200" height="80">
+                </a>
+                <ul class="nav-links" role="menubar">
+                    <li role="none"><a href="/ru/" class="nav-link">Главная</a></li>
+                    <li role="none"><a href="/ru/about.html" class="nav-link">О нас</a></li>
+                    <li role="none"><a href="/ru/shop.html" class="nav-link active" aria-current="page">Магазин</a></li>
+                    <li role="none"><a href="/ru/service.html" class="nav-link">Сервис</a></li>
+                    <li role="none"><a href="/ru/contact.html" class="nav-link">Контакты</a></li>
+                </ul>
+                <div class="header-actions">
+                    <button class="cart-button" aria-label="Корзина" aria-haspopup="true">
+                        <img src="../svg/Vector.svg" alt="Корзина" class="cart-icon" aria-hidden="true">
+                    </button>
+                    <button class="cta-button" aria-label="Купить сейчас">Купить сейчас</button>
+                    <a href="/watch-golden.html" class="nav-link" lang="en">English</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="section-content" style="display: flex; align-items: center; gap: 2rem;">
+            <div style="flex:1; text-align:center;">
+                <picture>
+                    <source srcset="../img/Breguet - Classique Grande Complication Tourbillon 5317 1 (1) 1 1.webp" type="image/webp">
+                    <img src="../img/Breguet - Classique Grande Complication Tourbillon 5317 1 (1) 1 1.png" alt="Часы с золотым циферблатом" class="about-image" style="max-width:350px; margin:0 auto;">
+                </picture>
+            </div>
+            <div style="flex:2;">
+                <h1 class="section-heading">Часы с золотым циферблатом</h1>
+                <p class="section-description">Эта модель сочетает в себе роскошь и точность. Золотой циферблат, сапфировое стекло, швейцарский механизм и ремешок из натуральной кожи. Идеальный выбор для ценителей классического стиля.</p>
+                <div class="price-tag" style="font-size:2rem; margin-bottom:1.5rem;">$167.00</div>
+                <button class="buy-button" aria-label="Купить сейчас">Купить сейчас</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="../svg/Eaglesquare.svg" alt="Часы Eagle Square" class="footer-logo" width="150" height="60">
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; EAGLESQUARE. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.site-header');
+            let lastScroll = 0;
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+
+                if (currentScroll <= 0) {
+                    header.classList.remove('scroll-up');
+                    return;
+                }
+
+                if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+                    header.classList.remove('scroll-up');
+                    header.classList.add('scroll-down');
+                } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+                    header.classList.remove('scroll-down');
+                    header.classList.add('scroll-up');
+                }
+                lastScroll = currentScroll;
+            });
+
+            const cartButton = document.querySelector('.cart-button');
+            const cartCount = document.querySelector('.cart-count');
+            let count = 0;
+
+            cartButton.addEventListener('click', () => {
+                count++;
+                cartCount.textContent = count;
+                cartCount.setAttribute('aria-label', `Корзина содержит ${count} товаров`);
+            });
+
+            // Purchase Now button in header
+            const purchaseBtn = document.querySelector('.cta-button');
+            if (purchaseBtn) {
+                purchaseBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    try {
+                        window.location.href = '/ru/shop.html';
+                    } catch (error) {
+                        console.error('Ошибка при переходе в магазин:', error);
+                        window.location.replace('/ru/shop.html');
+                    }
+                });
+            }
+
+            // Buy Now button on page
+            const buyNowBtn = document.querySelector('.buy-button');
+            if (buyNowBtn) {
+                buyNowBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    try {
+                        window.location.href = '/ru/shop.html';
+                    } catch (error) {
+                        console.error('Ошибка при переходе в магазин:', error);
+                        window.location.replace('/ru/shop.html');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

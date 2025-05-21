@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Eagle Square Luxury Watches - Discover our collection of high-precision timepieces">
+    <meta name="description" content="Eagle Square Luxury Watches - Откройте нашу коллекцию высокоточных часов">
     <title>Eagle Square Luxury Watches</title>
-    <link rel="icon" href="svg/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../svg/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" as="style" crossorigin>
@@ -113,7 +113,8 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: var(--spacing-xl);
+            gap: var(--spacing-sm);
+            flex-wrap: nowrap;
         }
 
         .brand-logo {
@@ -126,8 +127,9 @@
 
         .nav-links {
             display: flex;
-            gap: var(--spacing-xl);
+            gap: var(--spacing-sm);
             list-style: none;
+            flex-shrink: 0;
         }
 
         .nav-link {
@@ -151,7 +153,8 @@
         .header-actions {
             display: flex;
             align-items: center;
-            gap: var(--spacing-md);
+            gap: var(--spacing-sm);
+            flex-shrink: 0;
         }
 
         .cart-button {
@@ -323,7 +326,7 @@
             }
         }
     </style>
-    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../style.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="/css/search.css">
     <!-- Yandex.Metrika counter -->
 <script type="text/javascript" defer>
@@ -360,30 +363,30 @@
         <div class="header-wrapper">
             <nav class="primary-nav" role="navigation" aria-label="Main navigation">
                 <a href="/" class="brand-logo" aria-label="Eagle Square home">
-                    <img src="svg/Eaglesquare.svg" alt="" width="200" height="80">
+                    <img src="../svg/Eaglesquare.svg" alt="Часы Eagle Square" width="200" height="80">
                 </a>
                 
                 <div class="nav-links">
-                    <a href="/" class="nav-link active" role="menuitem" aria-current="page">Home</a>
-                    <a href="/about.html" class="nav-link" role="menuitem">About</a>
-                    <a href="/shop.html" class="nav-link" role="menuitem">Shop</a>
-                    <a href="/service.html" class="nav-link" role="menuitem">Service</a>
-                    <a href="/contact.html" class="nav-link" role="menuitem">Contact</a>
+                    <a href="/ru/" class="active" aria-current="page">Главная</a>
+                    <a href="/ru/about.html">О нас</a>
+                    <a href="/ru/shop.html">Магазин</a>
+                    <a href="/ru/service.html">Сервис</a>
+                    <a href="/ru/contact.html">Контакты</a>
                 </div>
 
                 <div class="header-actions">
                     <div class="search-container">
-                        <input type="text" class="search-input" placeholder="Search..." aria-label="Search">
+                        <input type="text" class="search-input" id="search-input" placeholder="Поиск..." aria-label="Поиск">
                         <div id="search-results" style="display: none;"></div>
                     </div>
-                    <a href="/cart.html" class="cart-icon" aria-label="Shopping Cart">
+                    <a href="/ru/cart.html" class="cart-icon" aria-label="Корзина">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M9 20a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path>
                             <path d="M20 20a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path>
                             <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
                         </svg>
                     </a>
-                    <a href="/ru/" class="nav-link" lang="ru">Русский</a>
+                    <a href="/" class="language-switch">English</a>
                 </div>
             </nav>
         </div>
@@ -392,21 +395,19 @@
     <main id="main-content" role="main" class="main-content">
         <section class="hero-section" aria-labelledby="hero-title">
             <div class="hero-content">
-                <h1 id="hero-title" class="hero-heading">
-                    Discover the Exquisite Collection of High-Precision Timepieces
-                </h1>
+                <h1 id="hero-title" class="hero-heading">Откройте для себя Изысканную Коллекцию Высокоточных Часов</h1>
                 <p class="hero-description">
-                    Premium watches crafted with precision and elegance for the discerning collector.
+                    Часы премиум-класса, созданные с точностью и элегантностью для искушенных коллекционеров.
                 </p>
                 <div class="price-tag" aria-label="Price">$289.00</div>
-                <button class="buy-button" aria-label="Buy now" id="buy-now-btn">Buy Now</button>
+                <button class="buy-button" aria-label="Купить сейчас" id="buy-now-btn">Купить сейчас</button>
             </div>
             
             <div class="hero-image-container">
                 <div class="hero-image-wrapper" role="img" aria-label="Featured luxury watch">
                     <picture>
-                        <source src="img/1447483186 1.webp" type="image/webp">
-                        <img src="img/1447483186 1.png" alt="balls" class="hero-image" aria-hidden="true" width="500" height="700">
+                        <source src="../img/1447483186 1.webp" type="image/webp">
+                        <img src="../img/1447483186 1.png" alt="Роскошные часы" class="hero-image" aria-hidden="true" width="500" height="700">
                     </picture>
                 </div>
                 <div class="accent-circle"></div>
@@ -426,8 +427,8 @@
                     <article class="watch-card">
                         <div class="watch-image-wrapper">
                             <picture>
-                                <source src="img/Breguet - Classique Grande Complication Tourbillon 5317 1 (1) 1 1.webp" type="image/webp">
-                                <img src="img/Breguet - Classique Grande Complication Tourbillon 5317 1 (1) 1 1.png" alt="Golden Dial Watch" class="watch-image" width="200" height="200">
+                                <source src="../img/Breguet - Classique Grande Complication Tourbillon 5317 1 (1) 1 1.webp" type="image/webp">
+                                <img src="../img/Breguet - Classique Grande Complication Tourbillon 5317 1 (1) 1 1.png" alt="Часы с золотым циферблатом" class="watch-image" width="200" height="200">
                             </picture>
                         </div>
                         <h3 class="watch-title">Golden Dial Watch</h3>
@@ -438,8 +439,8 @@
                     <article class="watch-card">
                         <div class="watch-image-wrapper">
                             <picture>
-                                <source src="img/IWC-unique-platinum-Big-Pilot-s-Perpetual-Calendar-Edition-Le-Petit-Prince-(3) 1 2.webp" type="image/webp">
-                                <img src="img/IWC-unique-platinum-Big-Pilot-s-Perpetual-Calendar-Edition-Le-Petit-Prince-(3) 1 2.png" alt="Silver Dial Watch" class="watch-image" width="200" height="200">
+                                <source src="../img/IWC-unique-platinum-Big-Pilot-s-Perpetual-Calendar-Edition-Le-Petit-Prince-(3) 1 2.webp" type="image/webp">
+                                <img src="../img/IWC-unique-platinum-Big-Pilot-s-Perpetual-Calendar-Edition-Le-Petit-Prince-(3) 1 2.png" alt="Часы с серебряным циферблатом" class="watch-image" width="200" height="200">
                             </picture>
                         </div>
                         <h3 class="watch-title">Silver Dial Watch</h3>
@@ -450,8 +451,8 @@
                     <article class="watch-card">
                         <div class="watch-image-wrapper">
                             <picture>
-                                <source src="img/omega-watch 1 1.webp" type="image/webp">
-                                <img src="img/omega-watch 1 1.png" alt="Blue Dial Watch" class="watch-image" width="200" height="200">
+                                <source src="../img/omega-watch 1 1.webp" type="image/webp">
+                                <img src="../img/omega-watch 1 1.png" alt="Часы с синим циферблатом" class="watch-image" width="200" height="200">
                             </picture>
                         </div>
                         <h3 class="watch-title">Blue Dial Watch</h3>
@@ -464,30 +465,30 @@
 
         <section class="features-section" aria-labelledby="features-title">
             <div class="section-content">
-                <h2 id="features-title" class="section-heading">Why People Choose Us?</h2>
+                <h2 id="features-title" class="section-heading">Почему выбирают нас?</h2>
                 <div class="features-grid">
                     <article class="feature-card">
-                        <img src="svg/image 680.svg" alt="Sapphire Crystal" class="feature-icon" width="50" height="50">
-                        <h3>Sapphire Crystal</h3>
-                        <p>Scratch-resistant and durable protection for your timepiece</p>
+                        <img src="../svg/image 680.svg" alt="Сапфировое стекло" class="feature-icon" width="50" height="50">
+                        <h3>Сапфировое стекло</h3>
+                        <p>Устойчивая к царапинам и долговечная защита для ваших часов</p>
                     </article>
 
                     <article class="feature-card">
-                        <img src="svg/Group 1000004848.svg" alt="Stainless Steel" class="feature-icon" width="50" height="50">
-                        <h3>Stainless Steel</h3>
-                        <p>Premium grade materials for lasting durability</p>
+                        <img src="../svg/Group 1000004848.svg" alt="Нержавеющая сталь" class="feature-icon" width="50" height="50">
+                        <h3>Нержавеющая сталь</h3>
+                        <p>Материалы премиум-класса для долговечности</p>
                     </article>
 
                     <article class="feature-card">
-                        <img src="svg/Group 1000004847.svg" alt="Swiss Movement" class="feature-icon" width="50" height="50">
-                        <h3>Swiss Movement</h3>
-                        <p>Precision engineered for accurate timekeeping</p>
+                        <img src="../svg/Group 1000004847.svg" alt="Швейцарский механизм" class="feature-icon" width="50" height="50">
+                        <h3>Швейцарский механизм</h3>
+                        <p>Точность, разработанная для точного отсчета времени</p>
                     </article>
 
                     <article class="feature-card">
-                        <img src="svg/Group 1000004846.svg" alt="Leather Straps" class="feature-icon" width="50" height="50">
-                        <h3>Leather Straps</h3>
-                        <p>Genuine leather for comfort and style</p>
+                        <img src="../svg/Group 1000004846.svg" alt="Кожаные ремешки" class="feature-icon" width="50" height="50">
+                        <h3>Кожаные ремешки</h3>
+                        <p>Натуральная кожа для комфорта и стиля</p>
                     </article>
                 </div>
             </div>
@@ -495,14 +496,14 @@
 
         <section class="newsletter-section" aria-labelledby="newsletter-title">
             <div class="section-content">
-                <h2 id="newsletter-title" class="section-heading">Subscribe for Exclusive Updates</h2>
+                <h2 id="newsletter-title" class="section-heading">Подпишитесь на Эксклюзивные Обновления</h2>
                 <form class="newsletter-form" action="/subscribe" method="POST">
                     <div class="form-group">
                         <label for="email" class="visually-hidden">Email address</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required 
+                        <input type="email" id="email" name="email" placeholder="Введите ваш Email" required 
                                aria-required="true" class="newsletter-input">
                     </div>
-                    <button type="submit" class="subscribe-button">Subscribe</button>
+                    <button type="submit" class="subscribe-button">Подписаться</button>
                 </form>
             </div>
         </section>
@@ -511,20 +512,20 @@
     <footer class="site-footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-brand">
-                <img src="/svg/Eaglesquare.svg" alt="Eagle Square Watches" class="footer-logo" width="150" height="60">
+                <img src="../svg/Eaglesquare.svg" alt="Часы Eagle Square" class="footer-logo" width="150" height="60">
             </div>
             
             <div class="footer-contact">
                 <div class="contact-item">
-                    <img src="/svg/Ph.svg" alt="bas" aria-hidden="true" width="30" height="30">
+                    <img src="../svg/Ph.svg" alt="Телефон" aria-hidden="true" width="30" height="30">
                     <div>
-                        <h3>Phone</h3>
+                        <h3>Телефон</h3>
                         <a href="tel:02014552634">020-1455-236-34</a>
                     </div>
                 </div>
                 
                 <div class="contact-item">
-                    <img src="/svg/Em.svg" alt="sda" aria-hidden="true" width="30" height="30">
+                    <img src="../svg/Em.svg" alt="Email" aria-hidden="true" width="30" height="30">
                     <div>
                         <h3>Email</h3>
                         <a href="mailto:eaglesquare70@exa.com">eaglesquare70@exa.com</a>
@@ -532,19 +533,21 @@
                 </div>
                 
                 <div class="contact-item">
-                    <img src="/svg/Co.svg" alt="dsad" aria-hidden="true" width="30" height="30">
+                    <img src="../svg/Co.svg" alt="Адрес" aria-hidden="true" width="30" height="30">
                     <div>
-                        <h3>Address</h3>
+                        <h3>Адрес</h3>
                         <address>120 King St, Charleston, USA</address>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; EAGLESQUARE. All Rights Reserved.</p>
+                <p>&copy; EAGLESQUARE. Все права защищены.</p>
             </div>
         </div>
     </footer>
+
+    <div id="search-overlay"></div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -569,15 +572,16 @@
                 lastScroll = currentScroll;
             });
 
-            const cartButton = document.querySelector('.cart-button');
-            const cartCount = document.querySelector('.cart-count');
-            let count = 0;
-
-            cartButton.addEventListener('click', () => {
-                count++;
-                cartCount.textContent = count;
-                cartCount.setAttribute('aria-label', `Cart contains ${count} items`);
-            });
+            const cartIconLink = document.querySelector('.cart-icon');
+            if (cartIconLink) {
+                cartIconLink.addEventListener('click', (e) => {
+                    e.preventDefault(); // Предотвращаем стандартное действие ссылки
+                    // Здесь могла бы быть логика открытия корзины или перехода на страницу корзины
+                    console.log('Иконка корзины нажата');
+                    // Пример: переход на страницу корзины
+                    window.location.href = '/ru/cart.html';
+                });
+            }
 
             const newsletterForm = document.querySelector('.newsletter-form');
             
@@ -586,42 +590,43 @@
                 const email = e.target.querySelector('input[type="email"]').value;
                 
                 if (email) {
-                    console.log('Newsletter subscription:', email);
+                    console.log('Подписка на рассылку:', email);
                     e.target.reset();
-                    alert('Thank you for subscribing!');
+                    alert('Спасибо за подписку!');
                 }
             });
 
-            // Purchase Now button
+            // Purchase Now button in header (if it exists)
             const purchaseBtn = document.getElementById('purchase-now-btn');
             if (purchaseBtn) {
                 purchaseBtn.addEventListener('click', () => {
-                    window.location.href = 'shop.html';
-                });
-            }
-
-            // Search functionality
-            const searchInput = document.querySelector('.search-input');
-            const watchCards = document.querySelectorAll('.watch-card');
-            if (searchInput) {
-                searchInput.addEventListener('input', (e) => {
-                    const value = e.target.value.toLowerCase();
-                    watchCards.forEach(card => {
-                        const title = card.querySelector('.watch-title').textContent.toLowerCase();
-                        card.style.display = title.includes(value) ? '' : 'none';
-                    });
-                });
-            }
-
-            // Buy Now button
-            const buyNowBtn = document.getElementById('buy-now-btn');
-            if (buyNowBtn) {
-                buyNowBtn.addEventListener('click', () => {
-                    window.location.href = 'shop.html';
+                    try {
+                        window.location.href = '/ru/shop.html';
+                    } catch (error) {
+                        console.error('Ошибка при перенаправлении:', error);
+                        window.location.replace('/ru/shop.html');
+                    }
                 });
             }
         });
     </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buyNowBtn = document.getElementById('buy-now-btn');
+            if (buyNowBtn) {
+                buyNowBtn.addEventListener('click', () => {
+                    try {
+                        window.location.href = '/ru/shop.html';
+                    } catch (error) {
+                        console.error('Ошибка при перенаправлении:', error);
+                        window.location.replace('/ru/shop.html');
+                    }
+                });
+            }
+        });
+    </script>
+
     <script src="/js/search.js"></script>
 </body>
 </html>

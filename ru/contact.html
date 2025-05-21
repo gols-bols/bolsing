@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4TXZLE3EN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y4TXZLE3EN');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Свяжитесь с Eagle Square Luxury Watches. Найдите нашу контактную информацию и отправьте нам сообщение.">
+    <title>Контакты - Eagle Square Luxury Watches</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <div class="header-wrapper">
+            <nav class="primary-nav" role="navigation" aria-label="Main navigation">
+                <a href="/ru/" class="brand-logo" aria-label="Eagle Square home">
+                    <img src="../svg/Eaglesquare.svg" alt="Часы Eagle Square" width="200" height="80">
+                </a>
+                <ul class="nav-links" role="menubar">
+                    <li role="none"><a href="/ru/" class="nav-link">Главная</a></li>
+                    <li role="none"><a href="/ru/about.html" class="nav-link">О нас</a></li>
+                    <li role="none"><a href="/ru/shop.html" class="nav-link">Магазин</a></li>
+                    <li role="none"><a href="/ru/service.html" class="nav-link">Сервис</a></li>
+                    <li role="none"><a href="/ru/contact.html" class="nav-link active" aria-current="page">Контакты</a></li>
+                </ul>
+                <div class="header-actions">
+                    <button class="cart-button" aria-label="Корзина" aria-haspopup="true">
+                        <img src="../svg/Vector.svg" alt="Корзина" class="cart-icon" aria-hidden="true">
+                    </button>
+                    <button class="cta-button" aria-label="Купить сейчас">Купить сейчас</button>
+                    <a href="/contact.html" class="nav-link" lang="en">English</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main" class="main-content">
+        <section class="section-content">
+            <h1 class="section-heading">Свяжитесь с нами</h1>
+            <p class="section-description">
+                Есть вопросы? Свяжитесь с нами по телефону или электронной почте, или посетите наш магазин.
+            </p>
+            <div class="contact-form">
+                <h2>Отправьте нам сообщение</h2>
+                <form action="/send-message" method="POST">
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Отправить сообщение</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="../svg/Eaglesquare.svg" alt="Часы Eagle Square" class="footer-logo" width="150" height="60">
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; EAGLESQUARE. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
