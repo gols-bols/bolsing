@@ -224,6 +224,13 @@ button {
     padding: 2px 6px;
     border-radius: var(--border-radius-full);
 }
+.language-switch {
+    color: var(--color-accent);
+    font-weight: 400;
+    padding: var(--spacing-sm);
+    transition: color var(--transition-fast);
+    text-decoration: none;
+}
 
 .cta-button {
     background: var(--color-accent);

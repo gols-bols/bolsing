@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Eagle Square Luxury Watches</title>
+    <link rel="icon" href="../svg/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" as="style" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/css/search.css">
+    <style>
+        /* Add specific styles for the cart page here */
+        .cart-container {
+            max-width: var(--container-max-width);
+            margin: 40px auto;
+            padding: var(--container-padding);
+        }
+
+        .cart-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .cart-items {
+            border-top: 1px solid var(--color-gray-300);
+            margin-bottom: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--color-gray-300);
+        }
+
+        .cart-item-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-right: 20px;
+            border-radius: var(--border-radius-sm);
+        }
+
+        .cart-item-details {
+            flex-grow: 1;
+        }
+
+        .cart-item-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .cart-item-price {
+            color: var(--color-accent);
+        }
+
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cart-total {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .checkout-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto 0;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .cart-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .cart-item-image {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link"><span>Пропустить до основного содержимого</span></a>
+
+    <header class="site-header" role="banner">
+        <div class="header-wrapper">
+            <nav class="primary-nav" role="navigation" aria-label="Основная навигация">
+                <a href="/ru/" class="brand-logo" aria-label="Главная страница Eagle Square">
+                    <img src="../svg/Eaglesquare.svg" alt="Логотип Eagle Square" width="200" height="80">
+                </a>
+
+                <div class="nav-links">
+                    <a href="/ru/" class="nav-link">Главная</a>
+                    <a href="/ru/about.html" class="nav-link">О нас</a>
+                    <a href="/ru/shop.html" class="nav-link">Магазин</a>
+                    <a href="/ru/service.html" class="nav-link">Сервис</a>
+                    <a href="/ru/contact.html" class="nav-link">Контакты</a>
+                </div>
+
+                <div class="header-actions">
+                     <div class="search-container">
+                        <input type="text" class="search-input" id="search-input" placeholder="Поиск..." aria-label="Поиск">
+                        <div id="search-results" style="display: none;"></div>
+                    </div>
+                    <a href="/ru/cart.html" class="cart-icon" aria-label="Корзина">
+                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                             <path d="M9 20a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path>
+                             <path d="M20 20a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path>
+                             <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                         </svg>
+                    </a>
+                     <a href="/cart.html" class="language-switch">English</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" role="main" class="main-content">
+        <section class="cart-container">
+            <h1 class="cart-title">Корзина</h1>
+
+            <div class="cart-items">
+                <!-- Товары в корзине будут здесь -->
+                <div class="cart-item">
+                    <img src="../img/watch-placeholder.png" alt="Название часов" class="cart-item-image">
+                    <div class="cart-item-details">
+                        <h3 class="cart-item-title">Название часов</h3>
+                        <p class="cart-item-price">$100.00</p>
+                    </div>
+                     <div class="cart-item-quantity">
+                         Количество: 1
+                    </div>
+                </div>
+                 <div class="cart-item">
+                    <img src="../img/watch-placeholder2.png" alt="Другие часы" class="cart-item-image">
+                    <div class="cart-item-details">
+                        <h3 class="cart-item-title">Другие часы</h3>
+                        <p class="cart-item-price">$150.00</p>
+                    </div>
+                    <div class="cart-item-quantity">
+                         Количество: 2
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-total">
+                Итого: $400.00
+            </div>
+
+            <a href="#" class="cta-button checkout-button">Перейти к оформлению</a>
+
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="../svg/Eaglesquare.svg" alt="Логотип Eagle Square" class="footer-logo" width="150" height="60">
+            </div>
+
+            <div class="footer-contact">
+                <div class="contact-item">
+                    <img src="../svg/Ph.svg" alt="Телефон" aria-hidden="true" width="30" height="30">
+                    <div>
+                        <h3>Телефон</h3>
+                        <a href="tel:02014552634">020-1455-236-34</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <img src="../svg/Em.svg" alt="Email" aria-hidden="true" width="30" height="30">
+                    <div>
+                        <h3>Email</h3>
+                        <a href="mailto:eaglesquare70@exa.com">eaglesquare70@exa.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <img src="../svg/Co.svg" alt="Адрес" aria-hidden="true" width="30" height="30">
+                    <div>
+                        <h3>Адрес</h3>
+                        <address>120 King St, Charleston, USA</address>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; EAGLESQUARE. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+     <div id="search-overlay"></div>
+
+     <script src="/js/search.js"></script>
+     <script>
+        // Basic JS for cart page (displaying placeholder items)
+        document.addEventListener('DOMContentLoaded', () => {
+            // In a real scenario, you would load cart items from localStorage or a server here
+            console.log('Страница корзины загружена');
+        });
+     </script>
+</body>
+</html> 
